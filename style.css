@@ -1,0 +1,170 @@
+
+/* ======================================= */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200");
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:100"); */
+.hero {
+     margin: 0;
+  background-color: #000000;
+  position: relative;
+
+  width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+body{
+     margin: 0;
+     padding: 0;
+     background-color: rgb(0, 0, 0);
+  
+}
+
+
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #003298;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: cube 12s ease-in forwards infinite;
+          animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #0051f4;
+}
+.cube:nth-child(2) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+
+
+/* ==================================================== */
+#parent{
+     width: 90%;
+     margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+     /* background-color: #f0eeee; */
+     list-style: none;
+     justify-content: center;
+}
+
+ button{
+     min-width: 15px;
+     padding: 10px;
+     margin: 20px 15px;
+     outline: none;
+
+     background-color: #000000;
+     text-transform: capitalize;
+     color: #fff;
+     border: none;
+     box-shadow: inset 2px 2px 10px 2px  rgb(0 81 244) ;
+     cursor: pointer;
+     border-radius: 5px;
+     text-transform: capitalize;
+     letter-spacing: 1px;
+     line-height: 1.5;
+     transition: all 0.4s;
+
+}
+button:hover{
+     background-image: linear-gradient(to right,blue,indigo,violet);
+   scale: 1.1;
+
+}
+#poster{
+     width: 100%;
+     text-align: center;
+}
+#poster h1{
+     color: #eee;
+}
+#posts{
+     width: 80%;
+     margin: 0 auto;
+     display: flex;
+     gap: 20px;
+     flex-wrap: wrap;
+}
+.postbody{
+     color: #eee;
+     border-radius: 10px;
+     padding: 10px;
+     width: 170px;
+     display: flex;
+     border: 1px solid #0051f4;
+     flex-direction: column;
+}
+
+.postbody h3{
+     height: 70px;
+     font-size: 15px;
+     font-weight: normal;
+     text-transform: capitalize;
+     text-align: center;
+}
+#comments{
+     color: #eee;
+     font-size: 10px;
+     line-height: 1.5;
+     text-transform: capitalize;
+     /* margin: 10px; */
+}
+#comments div {
+      margin-top: 6px;
+}
